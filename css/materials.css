@@ -1,0 +1,216 @@
+/* Production Materials Page Specific Styles */
+.materials-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('../images/product-banner.jpg') no-repeat center center/cover;
+  color: var(--white);
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.materials-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.materials-header p {
+  font-size: 1.2rem;
+  /* max-width: 800px; */
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.material-card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.material-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.material-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.material-image img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  
+}
+.material-info {
+  padding: 1rem;
+}
+
+.material-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.material-info p {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.material-features {
+  margin-top: 1.5rem;
+}
+
+.material-features li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.material-features i {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+/* Legacy Section */
+.legacy {
+  background: var(--light-color);
+}
+
+.legacy-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.legacy-text h3 {
+  font-size: 1.5rem;
+  /* color: var(--dark-color); */
+  margin-bottom: 0.5rem;
+}
+
+.legacy-features {
+  margin: 2rem 0;
+}
+
+.legacy-features li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.legacy-features i {
+  color: var(--primary-color);
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.experience-badge {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: .5rem;
+}
+
+.experience-badge span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+  line-height: 1;
+}
+
+.experience-badge p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.legacy-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.legacy-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* TabletScreen Starts */
+@media screen and (min-width: 768px) {
+  .materials-header h1 {
+      font-size: 3.5rem;
+  }
+  
+  .materials-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .legacy-content {
+      flex-direction: row;
+      align-items: center;
+  }
+  
+  .legacy-text, .legacy-image {
+      flex: 1;
+  }
+
+}
+/* Tablet Screen Ends */
+
+/* DesktopScreen Starts */
+@media screen and (min-width: 1024px) {
+  .materials-header {
+      height: 70vh;
+  }
+  
+  .material-card {
+      display: flex;
+      height: 300px;
+  }
+  
+  .material-image {
+      width: 50%;
+      height: auto;
+  }
+  
+  .material-info {
+      width: 70%;
+      /* padding: 2.5rem;  */
+  }
+}
+/* Desktop Screen Ends */
+
+/* LargeScreen Starts */
+@media screen and (min-width: 1280px) {
+  .materials-header h1 {
+      font-size: 4rem;
+  }
+  
+  .material-info h3 {
+      font-size: 1.5rem;
+  }
+}
+/* Large Screen Ends */
